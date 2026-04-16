@@ -1,14 +1,18 @@
-site_name: project
+site_name: Very Cool Docs
 site_description: Documentation for project
 site_author: hcagri
 
 repo_url: https://github.com/hcagri/project
 
+copyright: '&copy; 2025 hcagri'
+
 nav:
   - Home:
       - index.md
+  - My First Page: my-first-page.md
 
 theme:
+  name: material
   language: en
   icon:
     logo: fontawesome/solid/book
