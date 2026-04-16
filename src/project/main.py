@@ -29,6 +29,40 @@ def foo1(a):
     return a + c
 
 
+def foo2(a):
+    b = 0  # noqa: F841
+    c = a + 1
+    if a > 0:  # noqa: SIM102
+        if a > 10:
+            return 10
+    return a + c
+
+
+def foo3(a):
+    b = 0  # noqa: F841
+    c = a + 1
+    if a > 0:  # noqa: SIM102
+        if a > 10:
+            return 10
+    return a + c
+
+
+def foo4():
+
+    menu_1 = {"1": "Start Game", "2": "Load Game", "3": "Options", "4": "Exit"}
+
+    # fmt: off
+    menu_2 = {
+      "1": "Start Game",
+      "2": "Load Game",
+      "3": "Options",
+      "4": "Exit"
+  }
+    # fmt: on
+
+    return menu_1, menu_2
+
+
 def main() -> None:
     print(f"Running project version {__version__}")
     print(f"Result is: 1+2 = {add(1, 2)}")
